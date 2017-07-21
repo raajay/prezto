@@ -4,6 +4,8 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+export EDITOR='vim'
+export VISUAL='vim'
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -11,3 +13,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias dev='mosh -6 devvm25838.prn1.facebook.com'
+alias sz="source ~/.zshrc"
+alias ez="e ~/.zshrc"
+alias gs='git status --short -b'
+source ~/.bash/_bash_spark
