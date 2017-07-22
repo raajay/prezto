@@ -13,8 +13,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-alias dev='mosh -6 devvm25838.prn1.facebook.com'
 alias sz="source ~/.zshrc"
 alias ez="e ~/.zshrc"
+
+## git overrides
 alias gs='git status --short -b'
-source ~/.bash/_bash_spark
+alias ga='git add'
+
+## tmux overrides
+alias tls='tmux list-sessions'
+alias tatt='tmux attach-session -t '
