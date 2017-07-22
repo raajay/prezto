@@ -14,7 +14,7 @@ fi
 
 # Customize to your needs...
 alias sz="source ~/.zshrc"
-alias ez="e ~/.zshrc"
+alias ez="exec zsh"
 
 ## git overrides
 alias gs='git status --short -b'
@@ -23,3 +23,12 @@ alias ga='git add'
 ## tmux overrides
 alias tls='tmux list-sessions'
 alias tatt='tmux attach-session -t '
+
+## i need to see what is in a directory when i get there
+function cd {
+  new_directory="$*"
+  if [ $# -eq 0 ]; then
+    new_directory=${HOME};
+  fi;
+  builtin cd "${new_directory}" && ls -pGF
+}
