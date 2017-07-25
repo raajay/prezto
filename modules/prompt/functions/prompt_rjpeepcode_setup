@@ -45,7 +45,7 @@ function prompt_rjpeepcode_setup {
   PROMPT="
 %~ "'${git_info[prompt]}'"
 %(?.%F{green}${1:-☻ }%f.%F{red}${1:-☻ }%f) "
-RPROMPT='rprompt'
+RPROMPT='[%D{%L:%M:%S %p}]'
 
 }
 
