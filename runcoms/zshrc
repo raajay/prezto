@@ -32,3 +32,8 @@ function cd {
   fi;
   builtin cd "${new_directory}" && ls -pGF
 }
+
+# Source Prezto.
+if [[ -s "${HOME}/.zshrc_private" ]]; then
+  source "${HOME}/.zshrc_private"
+fi
