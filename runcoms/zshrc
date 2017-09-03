@@ -33,6 +33,9 @@ function cd {
   builtin cd "${new_directory}" && ls -pGF
 }
 
+# env vars
+export PDSH_SSH_ARGS_APPEND='-q -o StrictHostKeyChecking=no'
+
 # Source Prezto.
 if [[ -s "${HOME}/.zshrc_private" ]]; then
   source "${HOME}/.zshrc_private"
