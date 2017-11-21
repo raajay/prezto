@@ -41,11 +41,13 @@ function prompt_rjpeepcode_setup {
   zstyle ':prezto:module:git:info:behind' format ' %F{8}⬇%f'
   zstyle ':prezto:module:git:info:keys' format 'prompt' '%b%c%s%D%A%B'
 
+#%{$fg[yellow]%}%n@%m%{$reset_color%} %d "'${git_info[prompt]}'"
   # Define prompts.
   PROMPT="
 %{$fg[yellow]%}%n@%m%{$reset_color%} %d "'${git_info[prompt]}'"
 %(?.%F{green}${1:-☻ }%f.%F{red}${1:-☻ }%f) "
-RPROMPT='%{$fg[blue]%}[%D{%L:%M:%S %p}]%{$reset_color%}'
+#RPROMPT='%{$fg[blue]%}[%D{%L:%M:%S %p}]%{$reset_color%}'
+RPROMPT=''
 
 }
 
