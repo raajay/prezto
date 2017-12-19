@@ -26,13 +26,13 @@ alias tls='tmux list-sessions'
 alias tatt='tmux attach-session -t '
 
 ## i need to see what is in a directory when i get there
-function cd {
-  new_directory="$*"
-  if [ $# -eq 0 ]; then
-    new_directory=${HOME};
-  fi;
-  builtin cd "${new_directory}" && ls -pGF
-}
+#function cd {
+#  new_directory="$*"
+#  if [ $# -eq 0 ]; then
+#    new_directory=${HOME};
+#  fi;
+#  builtin cd "${new_directory}" && ls -pGF
+#}
 
 # env vars
 export PDSH_SSH_ARGS_APPEND='-q -o StrictHostKeyChecking=no'
