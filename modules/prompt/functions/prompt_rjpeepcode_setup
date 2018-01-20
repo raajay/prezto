@@ -44,8 +44,8 @@ function prompt_rjpeepcode_setup {
 #%{$fg[yellow]%}%n@%m%{$reset_color%} %d "'${git_info[prompt]}'"
   # Define prompts.
   PROMPT="
-%{$fg[blue]%}%D{%L:%M:%S %p}%{$reset_color%} %{$fg[yellow]%}%n@%m%{$reset_color%} %d "'${git_info[prompt]}'"
-%(?.%F{green}${1:-☻ }%f.%F{red}${1:-☻ }%f)%B%F{1}❯%F{3}❯%F{2}❯%f%b "
+%{$fg[blue]%}%D{%L:%M:%S %p}%{$reset_color%} %{$fg[red]%}%n@%m%{$reset_color%} %d "'${git_info[prompt]}'"
+%(?.%F{green}${1:-☻ }%f.%F{red}${1:-☻ }%f)%B%F{1}❯%F{2}❯%F{2}❯%f%b "
 #RPROMPT='%{$fg[blue]%}[%D{%L:%M:%S %p}]%{$reset_color%}'
 RPROMPT=''
 
