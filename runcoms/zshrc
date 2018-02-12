@@ -25,6 +25,10 @@ alias ga='git add'
 alias tls='tmux list-sessions'
 alias tatt='tmux attach-session -t '
 
+## vim easy launch
+alias le="vim +'colorscheme rj_white'"
+# alias de="vim +'colorscheme monokai2'"
+
 ## i need to see what is in a directory when i get there
 #function cd {
 #  new_directory="$*"
