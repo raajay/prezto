@@ -37,6 +37,17 @@ alias tatt='tmux attach-session -t '
 # env vars
 export PDSH_SSH_ARGS_APPEND='-q -o StrictHostKeyChecking=no'
 
+alias scp='noglob scp_wrap'
+function scp_wrap() {
+    local -a args
+    local i
+    for i in "$@"; do case $i in 
+        (*:*) args+=($i) ;;
+        (*) args+=(${~1}) ;;
+    esac; done
+    command scp "${(@)args}"
+}
+
 # Source Prezto.
 if [[ -s "${HOME}/.zshrc_private" ]]; then
   source "${HOME}/.zshrc_private"
